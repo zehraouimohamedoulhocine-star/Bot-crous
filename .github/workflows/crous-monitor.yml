@@ -6,7 +6,7 @@ on:
     # Deliberately OFF the round quarter-hours: GitHub queues a huge number of
     # crons at :00/:15/:30/:45 and delays or drops them under load. Off-peak
     # minutes fire far more reliably. Minimum interval allowed is 5 minutes.
-    - cron: "7,22,37,52 * * * *"
+    - cron: "*/5 * * * *"
   # Allow running the workflow by hand from the Actions tab.
   workflow_dispatch: {}
 
